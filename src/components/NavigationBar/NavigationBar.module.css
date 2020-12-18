@@ -1,0 +1,73 @@
+.NavigationBar {
+  --themeColor: rgb(79, 141, 235);
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid lightgray;
+  position: sticky;
+  backface-visibility: none;
+  top: 0;
+  left: 0;
+}
+.Logo{
+    font-weight: 400;
+    font-size: 1.5rem;
+    background-color: red;
+    padding: 1.5rem .5rem;
+    color: white;
+}
+.NavigationBar_Tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.NavigationBar_Tab {
+  position: relative;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+.NavigationBar_Tab i {
+  padding: 0.3rem;
+}
+.NavigationBar_Tab:hover:not(.LoginBtn) {
+  color: var(--themeColor);
+  border-bottom: 2px solid var(--themeColor);
+}
+
+.NavigationBar_DropDown_content {
+  height: 0;
+  display: none;
+  opacity: 0;
+  background-color: white;
+  /* width: 120%; */
+  top: 90%;
+  transition: all 0.5s ease-out;
+  left: 0;
+  color: black;
+  /* padding: 0.5rem; */
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3),4px 2px 10px rgba(0, 0, 0, 0.4) ;
+  position: absolute;
+}
+.NavigationBar_DropDown_content div {
+  display: block;
+  padding: 1rem 1rem;
+  text-align: start;
+}
+.NavigationBar_DropDown_content div:hover {
+  background-color: var(--themeColor);
+  color: white;
+}
+.NavigationBar_Tab:hover .NavigationBar_DropDown_content {
+  opacity: 1;
+  display: block;
+  height: inherit;
+}
+
+.LoginBtn {
+  background-color: var(--themeColor);
+  border-radius: 30px;
+  letter-spacing: 4px;
+  color: white;
+  padding: 1rem 2rem;
+}
